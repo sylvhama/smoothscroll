@@ -1,7 +1,7 @@
 'use strict';
 
 // polyfill
-function polyfill() {
+function polyfill(scrollTime) {
   // aliases
   var w = window;
   var d = document;
@@ -16,7 +16,7 @@ function polyfill() {
 
   // globals
   var Element = w.HTMLElement || w.Element;
-  var SCROLL_TIME = 468;
+  var SCROLL_TIME = scrollTime || 468;
 
   // object gathering original scroll methods
   var original = {
